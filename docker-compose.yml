@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+    oracle-db-18c:
+        image: oracle-db-18c
+        container_name: OracleXE
+        build: .
+        ports:
+            - "1521:1521"
+            - "5500:5500"
+        environment:
+            ORACLE_PWD: newPassword1234
+            ORACLE_CHARACTERSET: TH8TISASCII
+        
